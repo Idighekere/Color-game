@@ -13,7 +13,7 @@ header {
   padding: 1rem;
   color: white;
   display: flex;
-  justify-content: end;
+  justify-content: space-around;
   position: sticky;
   top: 0;
   /* min-width: 100%; */
@@ -111,6 +111,7 @@ header {
   }
   #options-container {
     grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: auto; */
   }
 
   .content {
