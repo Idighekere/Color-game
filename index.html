@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p class="score-container">Score: <span id="score-text" data-testid="score">0</span></p>
+
+    </header>
+    <main class="container">
+
+        <div class="content">
+
+            <div id="color-box" data-testid="colorBox"></div>
+
+            <div>
+                <p data-testid="gameInstructions">Choose a color that matches the color above</p>
+            </div>
+
+            <div id="options-container"></div>
+
+
+            <div class="bottom-content">
+                <p data-testid="gameStatus" id="gameStatus"></p>
+                <button id="reset-game" data-testid="newGameButton">New Game</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
