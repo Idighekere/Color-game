@@ -16,6 +16,8 @@ header {
   justify-content: end;
   position: sticky;
   top: 0;
+  /* min-width: 100%; */
+  overflow: hidden;
 
   .score-container {
     margin-right: 20%;
@@ -36,11 +38,13 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 100%; */
 }
 
 .content {
   border-radius: 1em;
   border: 0.51px solid #aaa;
+  width: auto;
   padding: 2em;
   box-shadow: 2px 1px 2px #aaa;
 
@@ -74,12 +78,13 @@ header {
 }
 
 #reset-game {
-  background: #ff1034;
+  background: red;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 1em;
+  padding: 0.7rem 1.2em;
   color: white;
   border-radius: 0.3rem;
+  font-size: 18px;
 }
 
 .failure {
@@ -92,9 +97,10 @@ header {
 
   .container {
     height: auto;
+    padding: 1rem;
 
     .content {
-      margin: 1em;
+      margin-top: 1em;
     }
   }
 }
@@ -104,12 +110,13 @@ header {
     height: auto;
   }
   #options-container {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   .content {
     border: none;
     box-shadow: none;
+    padding: 0;
   }
 
   header {
