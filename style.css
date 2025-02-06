@@ -81,14 +81,30 @@ header {
   background: red;
   border: none;
   cursor: pointer;
-  padding: 0.7rem 1.2em;
+  padding: 0.7rem 1.2rem;
   color: white;
   border-radius: 0.3rem;
   font-size: 18px;
 }
 
-.failure {
+#next-button {
+  background-color: #222;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.3rem;
 }
+
+/*
+#gameStatus {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+
+
+} */
 
 @media only screen and (max-width: 780px) {
   #options-container {
@@ -101,6 +117,37 @@ header {
 
     .content {
       margin-top: 1em;
+    }
+  }
+}
+
+.modal-container {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* opacity: 30%; */
+  height: 100vh;
+  width: 100%;
+  .modal-content {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    opacity: 100%;
+    padding: 3em;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+
+    p,
+    h4 {
+      margin: 0;
+      text-align: center;
     }
   }
 }
@@ -126,5 +173,75 @@ header {
     .score-container {
       margin: 0;
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#gameStatus {
+  font-size: 20px;
+  margin: 20px 0;
+  min-height: 30px;
+  /* Add these for animation base state */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+  animation: bounce 0.8s infinite ease-in-out;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.message-animate {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.correct-animation {
+  animation: popIn 0.6s ease-out;
+}
+
+.wrong-animation {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
   }
 }

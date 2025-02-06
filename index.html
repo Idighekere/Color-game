@@ -20,7 +20,7 @@
     <header>
         <h2>Color Game</h2>
         <p class="score-container">Score: <span id="score-text" data-testid="score">0</span></p>
-
+        <!-- <p>Timer: <span id="timer">15</span></p> -->
     </header>
     <main class="container">
 
@@ -29,14 +29,23 @@
             <div id="color-box" data-testid="colorBox"></div>
 
             <div>
-                <p data-testid="gameInstructions">Choose a color that matches the color above</p>
+                <p data-testid="gameInstructions" style="text-align: center;">Choose a color that matches the color
+                    above</p>
             </div>
 
             <div id="options-container"></div>
 
 
             <div class="bottom-content">
-                <p data-testid="gameStatus" id="gameStatus"></p>
+                <p data-testid="gameStatus" id="gameStatus">ss</p>
+                <button id="next-button">Next</button>
+            </div>
+        </div>
+
+        <div class="modal-container">
+            <div class="modal-content">
+                <h4 id="">Game Over</h4>
+                <p>OOps!! That was the wrong color!!</p>
                 <button id="reset-game" data-testid="newGameButton">New Game</button>
             </div>
         </div>
